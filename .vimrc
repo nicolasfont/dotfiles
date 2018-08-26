@@ -38,7 +38,6 @@ set expandtab
 "NERDTree
 nnoremap <Leader>f :NERDTreeToggle<Enter>
 nnoremap <Leader>v :NERDTreeFind<Enter>
-let NERDTreeQuitOnOpen=0 "Close NERDTree when opening a file
 let NERDTreeAutoDeleteBuffer=1 "Delete buffer when file is deleted
 let NERDTreeShowHidden=1 "Show hidden files
 let NERDTreeMinimalUI=1
