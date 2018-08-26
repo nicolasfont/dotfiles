@@ -1,5 +1,5 @@
 "vim-plug
-call plug#begin('~/.vim/plugged') 
+call plug#begin('~/.vim/plugged')
 Plug 'fxn/vim-monochrome'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
@@ -20,7 +20,7 @@ set autoread
 set showcmd
 let g:auto_save = 1
 let g:bufferline_echo = 0
-autocmd BufWritePost .vimrc source $MYVIMRC
+autocmd BufWritePost .vimrc source $MYVIMRC "Reload .vimrc when saving it
 
 "Leader keys
 map <Space> \
@@ -34,11 +34,11 @@ set expandtab
 "NERDTree
 nnoremap <Leader>f :NERDTreeToggle<Enter>
 nnoremap <Leader>v :NERDTreeFind<Enter>
-let NERDTreeQuitOnOpen = 0 "Closes NERDTree when opening a file
+let NERDTreeQuitOnOpen = 0 "Close NERDTree when opening a file
 let NERDTreeAutoDeleteBuffer = 1 "Delete buffer when file is deleted
-let NERDTreeShowHidden = 1 "Show hidden fikes
+let NERDTreeShowHidden = 1 "Show hidden files
 let NERDTreeMinimalUI = 1
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "Closes NERDTree if it's the last buffer
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "Close NERDTree when deleting the last buffer
 
 "Windows
 map <C-J> <C-W>j<C-W>
