@@ -8,6 +8,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'bling/vim-bufferline'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
 call plug#end()
 
 colorscheme monochrome
@@ -18,9 +20,11 @@ set updatetime=100
 set noswapfile
 set autoread
 set showcmd
-let g:auto_save = 1
-let g:bufferline_echo = 0
+let g:auto_save=1
+let g:bufferline_echo=0
 autocmd BufWritePost .vimrc source $MYVIMRC "Reload .vimrc when saving it
+let g:session_autosave='yes'
+let g:session_autoload='yes'
 
 "Leader keys
 map <Space> \
@@ -34,11 +38,10 @@ set expandtab
 "NERDTree
 nnoremap <Leader>f :NERDTreeToggle<Enter>
 nnoremap <Leader>v :NERDTreeFind<Enter>
-let NERDTreeQuitOnOpen = 0 "Close NERDTree when opening a file
-let NERDTreeAutoDeleteBuffer = 1 "Delete buffer when file is deleted
-let NERDTreeShowHidden = 1 "Show hidden files
-let NERDTreeMinimalUI = 1
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "Close NERDTree when deleting the last buffer
+let NERDTreeQuitOnOpen=0 "Close NERDTree when opening a file
+let NERDTreeAutoDeleteBuffer=1 "Delete buffer when file is deleted
+let NERDTreeShowHidden=1 "Show hidden files
+let NERDTreeMinimalUI=1
 
 "Windows
 map <C-J> <C-W>j<C-W>
