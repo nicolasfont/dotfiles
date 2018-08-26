@@ -20,14 +20,16 @@ set updatetime=100
 set noswapfile
 set autoread
 set showcmd
-let g:auto_save=1
 let g:bufferline_echo=0
-autocmd BufWritePost .vimrc source $MYVIMRC "Reload .vimrc when saving it
-let g:session_autosave='yes'
-let g:session_autoload='yes'
 
 "Leader keys
 map <Space> \
+
+"Saving
+let g:auto_save=1
+autocmd BufWritePost .vimrc source $MYVIMRC "Reload .vimrc when saving it
+let g:session_autosave='yes'
+let g:session_autoload='yes'
 
 "Indentation
 set tabstop=2
@@ -41,6 +43,7 @@ nnoremap <Leader>v :NERDTreeFind<Enter>
 let NERDTreeAutoDeleteBuffer=1 "Delete buffer when file is deleted
 let NERDTreeShowHidden=1 "Show hidden files
 let NERDTreeMinimalUI=1
+let NERDTreeNaturalSort=1
 
 "Windows
 map <C-J> <C-W>j<C-W>
