@@ -5,11 +5,11 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug '907th/vim-auto-save'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'bling/vim-bufferline'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
+Plug 'tpope/vim-vinegar'
 call plug#end()
 
 colorscheme monochrome
@@ -20,6 +20,7 @@ set updatetime=100
 set noswapfile
 set autoread
 set showcmd
+set scrolloff=999
 let g:bufferline_echo=0
 
 "Leader keys
@@ -36,14 +37,6 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-
-"NERDTree
-nnoremap <Leader>f :NERDTreeToggle<Enter>
-nnoremap <Leader>v :NERDTreeFind<Enter>
-let NERDTreeAutoDeleteBuffer=1 "Delete buffer when file is deleted
-let NERDTreeShowHidden=1 "Show hidden files
-let NERDTreeMinimalUI=1
-let NERDTreeNaturalSort=1
 
 "Windows
 map <C-J> <C-W>j<C-W>
