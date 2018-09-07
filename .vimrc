@@ -14,7 +14,9 @@ call plug#end()
 
 colorscheme monochrome
 syntax enable
-set termguicolors
+if exists('+termguicolors')
+  set termguicolors
+endif
 set number
 set updatetime=100
 set noswapfile
