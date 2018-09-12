@@ -10,6 +10,7 @@ Plug 'bling/vim-bufferline'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 Plug 'tpope/vim-vinegar'
+Plug 'djoshea/vim-autoread'
 call plug#end()
 
 colorscheme monochrome
@@ -20,7 +21,6 @@ endif
 set number
 set updatetime=100
 set noswapfile
-set autoread
 set showcmd
 set scrolloff=999
 let g:bufferline_echo=0
