@@ -11,6 +11,8 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 Plug 'tpope/vim-vinegar'
 Plug 'djoshea/vim-autoread'
+Plug 'tpope/vim-fugitive'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 colorscheme monochrome
@@ -30,7 +32,6 @@ map <Space> \
 
 "Saving
 let g:auto_save=1
-autocmd BufWritePost .vimrc source $MYVIMRC "Reload .vimrc when saving it
 let g:session_autosave='yes'
 let g:session_autoload='yes'
 
