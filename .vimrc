@@ -9,10 +9,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'bling/vim-bufferline'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
-Plug 'tpope/vim-vinegar'
 Plug 'djoshea/vim-autoread'
-Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
+Plug 'scrooloose/nerdtree'
+Plug 'qpkorr/vim-bufkill'
 call plug#end()
 
 colorscheme monochrome
@@ -42,10 +42,10 @@ set softtabstop=2
 set expandtab
 
 "Windows
-map <C-J> <C-W>j<C-W>
-map <C-K> <C-W>k<C-W>
-map <C-H> <C-W>h<C-W>
-map <C-L> <C-W>l<C-W>
+map <Leader>j <C-W>j<C-W>
+map <Leader>k <C-W>k<C-W>
+map <Leader>h <C-W>h<C-W>
+map <Leader>l <C-W>l<C-W>
 
 "Buffers
 nnoremap <Leader>1 :b1<Enter>
@@ -61,4 +61,9 @@ nnoremap <Leader>0 :b0<Enter>
 nnoremap <Leader><Tab> :bn<Enter>
 nnoremap <Leader>` :bp<Enter>
 nnoremap <Leader>d :bd<Enter>
+nnoremap <Leader>w :BW<Enter>
+
+"NERDTree
+map <Leader>n :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
