@@ -31,8 +31,8 @@ let g:bufferline_echo=0
 map <Space> \
 
 "Saving
-let g:auto_save=1
-let g:session_autosave='yes'
+let g:auto_save=0
+let g:session_ave='yes'
 let g:session_autoload='yes'
 
 "Indentation
